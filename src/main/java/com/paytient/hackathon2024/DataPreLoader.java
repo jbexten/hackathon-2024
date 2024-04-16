@@ -16,10 +16,10 @@ import java.time.LocalDate;
     @Bean
     CommandLineRunner initDatabase(ActivityDataRepository repository) {
         return args -> {
-            log.info("Preloading " + repository.saveAndFlush(new ActivityData("1", 1000, LocalDate.of(2024, 1, 1))));
-            log.info("Preloading " + repository.saveAndFlush(new ActivityData("1", 1001, LocalDate.of(2024, 1, 2))));
-            log.info("Preloading " + repository.saveAndFlush(new ActivityData("1", 1002, LocalDate.of(2024, 1, 3))));
-            log.info("Preloading " + repository.saveAndFlush(new ActivityData("1", 1003, LocalDate.of(2024, 1, 4))));
+            log.info("Preloading {}", repository.saveAndFlush(new ActivityData("1", 1000, LocalDate.of(2024, 1, 1))));
+            log.info("Preloading {}", repository.saveAndFlush(new ActivityData("1", 1001, LocalDate.of(2024, 1, 2))));
+            log.info("Preloading {}", repository.saveAndFlush(new ActivityData("1", 1002, LocalDate.of(2024, 1, 3))));
+            log.info("Preloading {}", repository.saveAndFlush(new ActivityData("1", 1003, LocalDate.of(2024, 1, 4))));
         };
     }
 }
