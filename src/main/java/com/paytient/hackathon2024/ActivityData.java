@@ -1,5 +1,6 @@
 package com.paytient.hackathon2024;
 
+import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
@@ -18,11 +19,11 @@ public class ActivityData {
     @GeneratedValue(generator = "UUID")
     private UUID id;
 
-    private String memberId;
+    private @Nonnull String memberId;
     private int steps;
-    private LocalDate date;
+    private @Nonnull LocalDate date;
 
-    public ActivityData(String memberId, int steps, LocalDate date) {
+    public ActivityData(@Nonnull String memberId, int steps, @Nonnull LocalDate date) {
         this.memberId = memberId;
         this.steps = steps;
         this.date = date;
